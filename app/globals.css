@@ -1,0 +1,300 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* CULORI DEFAULT (Tema Alb) */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+/* TEME LIGHT (data-theme) */
+/* -------------------------------------------------------------------------------------------------- */
+
+/* Tema: Crem */
+:root[data-theme='cream'] {
+    --background: oklch(0.985 0.01 70); /* Crem - fundal cald */
+    --card: oklch(0.985 0.01 70);
+    --popover: oklch(0.985 0.01 70);
+    --sidebar: oklch(0.985 0.01 70);
+    --secondary: oklch(0.94 0.005 70);
+    --muted: oklch(0.94 0.005 70);
+    --accent: oklch(0.94 0.005 70);
+}
+
+/* Tema: Vernil */
+:root[data-theme='vernil'] {
+    --background: oklch(0.95 0.05 140); /* Vernil - verde pal */
+    --card: oklch(0.95 0.05 140);
+    --popover: oklch(0.95 0.05 140);
+    --sidebar: oklch(0.95 0.05 140);
+    --secondary: oklch(0.90 0.03 140);
+    --muted: oklch(0.90 0.03 140);
+    --accent: oklch(0.90 0.03 140);
+}
+
+/* Tema: Pearl (Sidef) */
+:root[data-theme='pearl'] {
+    --background: oklch(0.97 0.005 300); /* Pearl - sidef/roz-violaceu f. pal */
+    --card: oklch(0.97 0.005 300);
+    --popover: oklch(0.97 0.005 300);
+    --sidebar: oklch(0.97 0.005 300);
+    --secondary: oklch(0.93 0.003 300);
+    --muted: oklch(0.93 0.003 300);
+    --accent: oklch(0.93 0.003 300);
+}
+
+/* Tema: Blush (Roz Pal) */
+:root[data-theme='blush'] {
+    --background: oklch(0.97 0.01 15); /* Blush - roz pal */
+    --card: oklch(0.97 0.01 15);
+    --popover: oklch(0.97 0.01 15);
+    --sidebar: oklch(0.97 0.01 15);
+    --secondary: oklch(0.93 0.005 15);
+    --muted: oklch(0.93 0.005 15);
+    --accent: oklch(0.93 0.005 15);
+}
+
+/* Tema: Blue Dust (Albastru Prafuit) */
+:root[data-theme='blue_dust'] {
+    --background: oklch(0.92 0.04 250); /* Albastru Prafuit */
+    --card: oklch(0.92 0.04 250);
+    --popover: oklch(0.92 0.04 250);
+    --sidebar: oklch(0.92 0.04 250);
+    --secondary: oklch(0.88 0.03 250);
+    --muted: oklch(0.88 0.03 250);
+    --accent: oklch(0.88 0.03 250);
+}
+
+/* Tema: Linen (Gri Deschis Cald) */
+:root[data-theme='linen'] {
+    --background: oklch(0.96 0.008 85); /* Gri Deschis Cald (Linen) */
+    --card: oklch(0.96 0.008 85);
+    --popover: oklch(0.96 0.008 85);
+    --sidebar: oklch(0.96 0.008 85);
+    --secondary: oklch(0.92 0.005 85);
+    --muted: oklch(0.92 0.005 85);
+    --accent: oklch(0.92 0.005 85);
+}
+
+
+/* -------------------------------------------------------------------------------------------------- */
+/* TEME DARK (.dark) */
+/* -------------------------------------------------------------------------------------------------- */
+.dark {
+  /* CULORI DEFAULT DARK (Tema Negru) */
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+/* Tema: Navy (Indigo Profund) */
+.dark[data-theme='navy'] {
+    --background: oklch(0.20 0.06 270); /* Navy (Indigo Profund) */
+    --card: oklch(0.20 0.06 270);
+    --popover: oklch(0.20 0.06 270);
+    --sidebar: oklch(0.25 0.06 270);
+    --secondary: oklch(0.32 0.04 270);
+    --muted: oklch(0.32 0.04 270);
+    --accent: oklch(0.32 0.04 270);
+}
+
+/* Tema: Midnight (Gri-Albăstrui) */
+.dark[data-theme='midnight'] {
+    --background: oklch(0.10 0.03 270); /* Midnight (Gri-Albăstrui) */
+    --card: oklch(0.10 0.03 270);
+    --popover: oklch(0.10 0.03 270);
+    --sidebar: oklch(0.15 0.03 270);
+    --secondary: oklch(0.20 0.02 270);
+    --muted: oklch(0.20 0.02 270);
+    --accent: oklch(0.20 0.02 270);
+}
+
+/* Tema: Dark Cinder (Cenușiu Întunecat) */
+.dark[data-theme='dark_cinder'] {
+    --background: oklch(0.18 0.01 90); /* Cenușiu Întunecat */
+    --card: oklch(0.18 0.01 90);
+    --popover: oklch(0.18 0.01 90);
+    --sidebar: oklch(0.23 0.01 90);
+    --secondary: oklch(0.30 0.005 90);
+    --muted: oklch(0.30 0.005 90);
+    --accent: oklch(0.30 0.005 90);
+}
+
+/* Tema: Dark Forest (Verde Forestier Închis) */
+.dark[data-theme='dark_forest'] {
+    --background: oklch(0.15 0.06 145); /* Verde Forestier Închis */
+    --card: oklch(0.15 0.06 145);
+    --popover: oklch(0.15 0.06 145);
+    --sidebar: oklch(0.20 0.06 145);
+    --secondary: oklch(0.28 0.04 145);
+    --muted: oklch(0.28 0.04 145);
+    --accent: oklch(0.28 0.04 145);
+}
+
+/* Tema: Espresso (Maro Espresso) */
+.dark[data-theme='espresso'] {
+    --background: oklch(0.17 0.08 75); /* Maro Espresso */
+    --card: oklch(0.17 0.08 75);
+    --popover: oklch(0.17 0.08 75);
+    --sidebar: oklch(0.22 0.08 75);
+    --secondary: oklch(0.30 0.06 75);
+    --muted: oklch(0.30 0.06 75);
+    --accent: oklch(0.30 0.06 75);
+}
+
+/* Tema: Night Blue (Albastru Nocturn) */
+.dark[data-theme='night_blue'] {
+    --background: oklch(0.12 0.04 235); /* Albastru Nocturn */
+    --card: oklch(0.12 0.04 235);
+    --popover: oklch(0.12 0.04 235);
+    --sidebar: oklch(0.17 0.04 235);
+    --secondary: oklch(0.25 0.03 235);
+    --muted: oklch(0.25 0.03 235);
+    --accent: oklch(0.25 0.03 235);
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+
+
+@theme inline {
+  --font-sans: "Geist", "Geist Fallback";
+  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Actualizare formatare paragraf cu indentare și spații între paragrafe */
+  .paragraph-format {
+    @apply !whitespace-pre-wrap font-serif text-justify;
+    line-height: 1.8;
+  }
+
+  /* Indentare la prima linie a fiecărui paragraf */
+  .paragraph-format::first-line {
+    @apply indent-8;
+  }
+}
+
+/* CSS pentru indentare și spații vizibile */
+.paragraph-format {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+}
+
+/* Liniile guide pentru spații între paragrafe */
+textarea.paragraph-format {
+  /* CORECȚIE FINALĂ: Au fost păstrate doar proprietățile de bază */
+  background-attachment: local;
+  background-repeat: repeat;
+  background-position: 0 0;
+  /* Liniile nu mai sunt generate */
+}
